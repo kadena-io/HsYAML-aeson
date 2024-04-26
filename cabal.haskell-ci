@@ -1,9 +1,12 @@
-branches: master ci-* release*
+branches: master
 
 installed: +all -transformers
 
-constraint-set mtl-2.3
-  ghc: >=8.6
-  constraints: mtl ^>=2.3
+constraint-set containers-0.7
+  ghc: >=8.2 && < 9.7
+  constraints: containers ^>=0.7
   tests: True
   run-tests: True
+
+raw-project
+  allow-newer: containers
